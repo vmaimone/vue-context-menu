@@ -1,7 +1,7 @@
 {
   "name": "vue-context-menu",
   "description": "vue context-menu component",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Vin Maimone <vmaimone@rochester.rr.com>",
   "main": "index.js",
   "engines": {
