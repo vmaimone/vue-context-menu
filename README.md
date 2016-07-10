@@ -21,11 +21,16 @@ npm run watch
 
 # runs vue-dev-server with the content of dev/
 npm run dev
+```
 
-# runs vue-dev-server with the content of dev/
-# saving it under static/ and push it to gh-pages branch
-npm run ghpages
-
-# bumps version / runs test / build / git push / npm publish
-npm version major/minor/patch
+# Example Usage
+```
+<script>
+import contextMenu from 'vue-context-menu'
+export default {
+  name: 'my-component',
+  components: { contextMenu },
+  ...
+}
+</script>
 ```
