@@ -1,5 +1,5 @@
 {
-  "name": "v-ctx-menu",
+  "name": "vue-context-menu",
   "description": "vue context-menu component",
   "version": "0.0.0",
   "author": "Vin Maimone <vmaimone@rochester.rr.com>",
@@ -55,5 +55,17 @@
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags && npm publish",
     "ghpages": "vue-dev-server --static static/ && gh-pages -d static"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmaimone/vue-context-menu.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmaimone/vue-context-menu/issues"
+  },
+  "homepage": "https://github.com/vmaimone/vue-context-menu#readme"
 }
