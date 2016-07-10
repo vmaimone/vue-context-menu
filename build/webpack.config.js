@@ -10,7 +10,7 @@ module.exports = {
         path: __dirname,
     },
     plugins: [
-    //   new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
+      new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
       new webpack.optimize.OccurenceOrderPlugin()
     ]
 }

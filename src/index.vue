@@ -1,4 +1,3 @@
-// out: ..
 <template lang="html">
 	<div
 		v-el:context-menu

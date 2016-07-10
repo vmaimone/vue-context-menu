@@ -1,5 +1,4 @@
-module.exports = function createBodyClickListener(fn) {
-
+module.exports = function createBodyClickListener (fn) {
   let isListening = false
 
   /* === public api ========================================== */
@@ -12,28 +11,27 @@ module.exports = function createBodyClickListener(fn) {
       window.addEventListener('click', _onclick)
       window.addEventListener('keyup', _onescape)
       isListening = true
-      if(typeof cb === 'function') cb()
+      if (typeof cb === 'function') cb()
     },
 
     stop(cb) {
       window.removeEventListener('click', _onclick)
       window.removeEventListener('keyup', _onescape)
       isListening = false
-      if(typeof cb === 'function') cb()
+      if (typeof cb === 'function') cb()
     }
   }
 
   /* === private helpers ===================================== */
-  function _onclick(e) {
-    if(!e.target.tagName !== 'BODY') {
+  function _onclick (e) {
+    if (!e.target.tagName !== 'BODY') {
       e.preventDefault()
     }
     if (typeof fn === 'function') fn(e)
     stop()
   }
 
-  function _onescape(e) {
+  function _onescape (e) {
     if (e.keyCode === 27) _onclick(e)
   }
-
 }
