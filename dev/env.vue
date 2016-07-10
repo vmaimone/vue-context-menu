@@ -12,7 +12,7 @@
     </div>
     <div style="clear:both;"></div>
 
-    <hr>
+    <hr style="margin: 2rem auto">
 
     <pre class="example">{{ contextClicks | json }}</pre>
 
@@ -22,9 +22,9 @@
       v-ref:ctx
       :ctx-data.sync="menuData"
       :ctx-visible.sync="showCtx">
-        <li class="ctx-header">{{menuData!==null && menuData.color}}</li>
+        <li class="ctx-header" v-if="menuData!==null">{{menuData.color}}</li>
         <li class="ctx-item">option one</li>
-        <li class="ctx-item">option two</li>
+        <li class="ctx-item disabled">option two (disabled)</li>
         <li class="ctx-item" @click="logClick($event, menuData)">add to log</li>
     </context-menu>
   </div>
@@ -36,8 +36,8 @@
   }
 
   .colored-box {
-    height: 20vh;
-    width: 20vh;
+    height: 10vh;
+    width: 10vh;
     display: inline-block;
     margin: .5rem;
   }
@@ -51,6 +51,7 @@
   .rhs {
     float: right;
     width: 40vw;
+    padding: .5rem 0;
   }
 </style>
 <script>

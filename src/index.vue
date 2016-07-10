@@ -21,6 +21,6 @@
 		</div>
 	</div>
 </template>
-<style src="ctx-menu.css"></style>
+<style src="./ctx-menu.css"></style>
 <script src="./ctx-menu.js"></script>
 

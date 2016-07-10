@@ -3,6 +3,7 @@ import createBodyClickListener from './body-click-listener'
 const EVENT_LIST = ['click', 'contextmenu', 'keydown']
 
 export default {
+  name: 'context-menu',
   props: {
     ctxVisible: {
       type: Boolean,

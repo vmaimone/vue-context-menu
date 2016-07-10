@@ -1,7 +1,7 @@
 {
   "name": "vue-context-menu",
   "description": "vue context-menu component",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Vin Maimone <vmaimone@rochester.rr.com>",
   "main": "index.js",
   "engines": {
@@ -51,7 +51,6 @@
     "dev": "vue-dev-server",
     "watch": "karma start test/karma.conf.js --browsers Chrome --auto-watch --reporters spec",
     "test": "karma start test/karma.conf.js --browsers Chrome --single-run",
-    "preversion": "npm test",
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags && npm publish",
     "ghpages": "vue-dev-server --static static/ && gh-pages -d static"

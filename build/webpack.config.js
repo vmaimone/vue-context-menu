@@ -1,10 +1,7 @@
 var webpack = require('webpack')
 
 module.exports = {
-    entry: {
-        "v-context-menu": "./build/common.js",
-        "body-click-listener": "./src/body-click-listener.js"
-    },
+    entry: "./build/common.js",
     output: {
         filename: "bundle.js",
         path: __dirname,

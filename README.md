@@ -27,8 +27,3 @@ npm run ghpages
 # bumps version / runs test / build / git push / npm publish
 npm version major/minor/patch
 ```
-
-
-## License
-Copyright (c) 2016 Paul Pflugradt
-Licensed under the MIT license.
