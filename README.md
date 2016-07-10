@@ -2,6 +2,8 @@
 
 > vue context-menu component
 
+Demo: https://vmaimone.github.io/vue-context-menu/#!/demo
+
 # Build Setup
 
 ```
