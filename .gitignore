@@ -1,0 +1,9 @@
+node_modules
+*.sublime-project
+*.sublime-workspace
+npm-debug.log
+dev/index.js
+static/
+/*.js
+!/eslintrc.js
+build/bundle.js
