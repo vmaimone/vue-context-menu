@@ -1,4 +1,4 @@
-# v-ctx-menu
+# vue-context-menu
 
 > vue context-menu component
 
@@ -15,9 +15,6 @@ npm run build
 
 # runs Karma with test/*.js
 npm run test
-
-# runs Karma with test/*.js and --auto-watch --reporters spec
-npm run watch
 
 # runs vue-dev-server with the content of dev/
 npm run dev
