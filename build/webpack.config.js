@@ -4,9 +4,7 @@ module.exports = {
     entry: "./build/common.js",
     output: {
         filename: "bundle.js",
-        path: __dirname,
-        library: "VueContextMenu",
-        libraryTarget: "umd"
+        path: __dirname
     },
     plugins: [
       new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
