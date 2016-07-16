@@ -46,7 +46,7 @@
   ],
   "readmeFilename": "README.md",
   "scripts": {
-    "build:vue": "NODE_ENV=production vue-compiler --out . src/*.vue",
+    "build:vue": "NODE_ENV=production webpack --config build/webpack.lib.config.js",
     "build:webpack": "webpack --config build/webpack.config.js",
     "build": "run-npm build:*",
     "analysis": "NODE_ENV=production webpack --profile --json --config build/webpack.config.js > stats.json",
