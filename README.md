@@ -9,7 +9,7 @@ Demo: https://vmaimone.github.io/vue-context-menu/#!/demo
 # Example Usage
 ```
 
-<div @contextmenu.prevent="$refs.ctxMenu.open($event, localMenuData)">
+<div @contextmenu.prevent="$refs.ctxMenu.open">
   ...
 </div>
 
