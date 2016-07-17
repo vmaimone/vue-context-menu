@@ -1,4 +1,9 @@
-module.exports = function createBodyClickListener (fn) {
+/**
+ * When listening for an outside click, we set useCapture = true.
+ * This way, we can prevent other click listeners from firing when performing the 'click-out'.
+ * If useCapture is set to false, the handlers fire backward
+ */
+module.exports = function createBodyClickListener(fn) {
   let isListening = false
 
   /* === public api ========================================== */
@@ -8,15 +13,15 @@ module.exports = function createBodyClickListener (fn) {
     },
 
     start(cb) {
-      window.addEventListener('click', _onclick)
-      window.addEventListener('keyup', _onescape)
+      window.addEventListener('click', _onclick, true)
+      window.addEventListener('keyup', _onescape, true)
       isListening = true
       if (typeof cb === 'function') cb()
     },
 
     stop(cb) {
-      window.removeEventListener('click', _onclick)
-      window.removeEventListener('keyup', _onescape)
+      window.removeEventListener('click', _onclick, true)
+      window.removeEventListener('keyup', _onescape, true)
       isListening = false
       if (typeof cb === 'function') cb()
     }
@@ -24,6 +29,7 @@ module.exports = function createBodyClickListener (fn) {
 
   /* === private helpers ===================================== */
   function _onclick (e) {
+    e.stopPropagation()
     if (!e.target.tagName !== 'BODY') {
       e.preventDefault()
     }

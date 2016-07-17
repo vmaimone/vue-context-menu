@@ -4,6 +4,7 @@
       v-for="color in colors"
       class="colored-box"
       :style="{background: color}"
+      @click="sayColor(color)"
       @contextmenu.prevent="$refs.ctx.open($event, {color: color, index: $index})">
     </div>
 
@@ -72,6 +73,9 @@ export default {
     logClick(e, context) {
       this.contextClicks.push(context)
       console.log('logged!', context)
+    },
+    sayColor(color) {
+      window.alert(color)
     }
   }
 }
