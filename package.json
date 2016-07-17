@@ -40,7 +40,7 @@
     "build:vue": "NODE_ENV=production webpack --config build/webpack.lib.config.js",
     "build:webpack": "webpack --config build/webpack.config.js",
     "build": "run-npm build:*",
-    "analysis": "NODE_ENV=production webpack --profile --json --config build/webpack.config.js > stats.json",
+    "analysis": "NODE_ENV=production webpack --profile --json --config build/webpack.lib.config.js > stats.json",
     "dev": "vue-dev-server",
     "watch": "karma start test/karma.conf.js --browsers Chrome --auto-watch --reporters spec",
     "test": "karma start test/karma.conf.js --browsers Chrome --single-run",

@@ -1,24 +1,22 @@
 {
-  "errors": [
-    "Entry module not found: Error: Cannot resolve 'file' or 'directory' ./build/[name].js in /Users/vin/v-ctx-menu\nresolve file\n  /Users/vin/v-ctx-menu/build/[name].js doesn't exist\n  /Users/vin/v-ctx-menu/build/[name].js.webpack.js doesn't exist\n  /Users/vin/v-ctx-menu/build/[name].js.web.js doesn't exist\n  /Users/vin/v-ctx-menu/build/[name].js.js doesn't exist\n  /Users/vin/v-ctx-menu/build/[name].js.json doesn't exist\nresolve directory\n  /Users/vin/v-ctx-menu/build/[name].js doesn't exist (directory default file)\n  /Users/vin/v-ctx-menu/build/[name].js/package.json doesn't exist (directory description file)"
-  ],
+  "errors": [],
   "warnings": [],
   "version": "1.13.1",
-  "hash": "cd4bc8f2ad510a870662",
-  "time": 75,
+  "hash": "0439d478ddc67a15ade7",
+  "time": 2736,
   "publicPath": "",
   "assetsByChunkName": {
-    "v-context-menu": "bundle.js"
+    "main": "index.js"
   },
   "assets": [
     {
-      "name": "bundle.js",
-      "size": 4266,
+      "name": "index.js",
+      "size": 7510,
       "chunks": [
         0
       ],
       "chunkNames": [
-        "v-context-menu"
+        "main"
       ],
       "emitted": true
     }
@@ -30,23 +28,23 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 2719,
+      "size": 13943,
       "names": [
-        "v-context-menu"
+        "main"
       ],
       "files": [
-        "bundle.js"
+        "index.js"
       ],
-      "hash": "1aa9fb2f406a7462de93",
+      "hash": "f9cce63285ccca198671",
       "parents": [],
       "modules": [
         {
           "id": 0,
-          "identifier": "/Users/vin/v-ctx-menu/build/common.js",
-          "name": "./build/common.js",
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+          "name": "./src/index.js",
           "index": 0,
-          "index2": 2,
-          "size": 46,
+          "index2": 8,
+          "size": 55,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -57,22 +55,22 @@
           "assets": [],
           "issuer": null,
           "profile": {
-            "factory": 14,
-            "building": 13
+            "factory": 19,
+            "building": 369
           },
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [],
-          "source": "window.componentName = require('../index.js')\n"
+          "source": "'use strict';\n\nmodule.exports = require('./index.vue');"
         },
         {
           "id": 1,
-          "identifier": "/Users/vin/v-ctx-menu/index.js",
-          "name": "./index.js",
-          "index": 1,
-          "index2": 1,
-          "size": 2281,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/lib/css-base.js",
+          "name": "./~/css-loader/lib/css-base.js",
+          "index": 4,
+          "index2": 0,
+          "size": 973,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -81,10 +79,190 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/vin/v-ctx-menu/build/common.js",
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+          "profile": {
+            "factory": 27,
+            "building": 56
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+              "module": "./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+              "moduleName": "./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+              "type": "cjs require",
+              "userRequest": "./../node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-82"
+            }
+          ],
+          "source": "\"use strict\";\n\nmodule.exports = function () {\n\tvar list = [];\n\n\tlist.toString = function toString() {\n\t\tvar result = [];\n\t\tfor (var i = 0; i < this.length; i++) {\n\t\t\tvar item = this[i];\n\t\t\tif (item[2]) {\n\t\t\t\tresult.push(\"@media \" + item[2] + \"{\" + item[1] + \"}\");\n\t\t\t} else {\n\t\t\t\tresult.push(item[1]);\n\t\t\t}\n\t\t}\n\t\treturn result.join(\"\");\n\t};\n\n\tlist.i = function (modules, mediaQuery) {\n\t\tif (typeof modules === \"string\") modules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor (var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif (typeof id === \"number\") alreadyImportedModules[id] = true;\n\t\t}\n\t\tfor (i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\n\t\t\tif (typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif (mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if (mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};"
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/body-click-listener.js",
+          "name": "./src/body-click-listener.js",
+          "index": 7,
+          "index2": 4,
+          "size": 844,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js?presets[]=es2015&plugins[]=transform-runtime&comments=false!/Users/vin/v-ctx-menu/src/ctx-menu.js",
+          "profile": {
+            "factory": 2,
+            "building": 258
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js?presets[]=es2015&plugins[]=transform-runtime&comments=false!/Users/vin/v-ctx-menu/src/ctx-menu.js",
+              "module": "./~/babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./src/ctx-menu.js",
+              "moduleName": "./~/babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./src/ctx-menu.js",
+              "type": "cjs require",
+              "userRequest": "./body-click-listener",
+              "loc": "7:25-57"
+            }
+          ],
+          "source": "'use strict';\n\nmodule.exports = function createBodyClickListener(fn) {\n  var isListening = false;\n\n  return {\n    get isListening() {\n      return isListening;\n    },\n\n    start: function start(cb) {\n      window.addEventListener('click', _onclick, true);\n      window.addEventListener('keyup', _onescape, true);\n      isListening = true;\n      if (typeof cb === 'function') cb();\n    },\n    stop: function stop(cb) {\n      window.removeEventListener('click', _onclick, true);\n      window.removeEventListener('keyup', _onescape, true);\n      isListening = false;\n      if (typeof cb === 'function') cb();\n    }\n  };\n\n  function _onclick(e) {\n    if (!e.target.tagName !== 'BODY') {\n      e.preventDefault();\n    }\n    if (typeof fn === 'function') fn(e);\n    stop();\n  }\n\n  function _onescape(e) {\n    if (e.keyCode === 27) _onclick(e);\n  }\n};"
+        },
+        {
+          "id": 3,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js?presets[]=es2015&plugins[]=transform-runtime&comments=false!/Users/vin/v-ctx-menu/src/ctx-menu.js",
+          "name": "./~/babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./src/ctx-menu.js",
+          "index": 6,
+          "index2": 5,
+          "size": 1953,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "profile": {
+            "factory": 32,
+            "building": 1656
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 6,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+              "module": "./src/index.vue",
+              "moduleName": "./src/index.vue",
+              "type": "cjs require",
+              "userRequest": "!!babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./ctx-menu.js",
+              "loc": "3:17-116"
+            }
+          ],
+          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _bodyClickListener = require('./body-click-listener');\n\nvar _bodyClickListener2 = _interopRequireDefault(_bodyClickListener);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = {\n  name: 'context-menu',\n  props: {\n    id: {\n      type: String,\n      default: 'default-ctx'\n    }\n  },\n  data: function data() {\n    var _this = this;\n\n    return {\n      locals: {},\n      ctxTop: 0,\n      ctxLeft: 0,\n      ctxVisible: false,\n      bodyClickListener: (0, _bodyClickListener2.default)(function (e) {\n        var isOpen = !!_this.ctxVisible;\n        var outsideClick = isOpen && !_this.$el.contains(e.target);\n        _this.ctxVisible = false;\n\n        if (outsideClick) {\n          _this.$emit('ctx-cancel', _this.locals);\n          e.stopPropagation();\n        } else {\n          _this.$emit('ctx-close', _this.locals);\n        }\n      })\n    };\n  },\n\n  methods: {\n    setPositionFromEvent: function setPositionFromEvent(e) {\n      var pageX = e.pageX;\n      var pageY = e.pageY;\n\n      this.ctxTop = pageY - document.body.scrollTop;\n      this.ctxLeft = pageX;\n    },\n    open: function open(e, data) {\n      if (this.ctxVisible) this.ctxVisible = false;\n      this.ctxVisible = true;\n      this.$emit('ctx-open', this.locals = data || {});\n      this.setPositionFromEvent(e);\n      this.$el.setAttribute('tab-index', -1);\n      this.bodyClickListener.start();\n      return this;\n    }\n  },\n  watch: {\n    ctxVisible: function ctxVisible(newVal, oldVal) {\n      if (oldVal === true && newVal === false) {\n        this.bodyClickListener.stop(function (e) {});\n      }\n    }\n  },\n  computed: {\n    ctxStyle: function ctxStyle() {\n      return {\n        'display': this.ctxVisible ? 'block' : 'none',\n        'top': (this.ctxTop || 0) + 'px',\n        'left': (this.ctxLeft || 0) + 'px'\n      };\n    }\n  }\n};"
+        },
+        {
+          "id": 4,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+          "name": "./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "index": 3,
+          "index2": 1,
+          "size": 1767,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
           "profile": {
             "factory": 1,
-            "building": 9
+            "building": 1851
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 8,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+              "module": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+              "moduleName": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+              "type": "cjs require",
+              "userRequest": "!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css",
+              "loc": "4:14-130"
+            }
+          ],
+          "source": "exports = module.exports = require(\"./../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".ctx{position:relative}.ctx-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:.9rem;color:#373a3c;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.ctx-divider{height:1px;margin:.5rem 0;overflow:hidden;background-color:#e5e5e5}.ctx-item{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.5;color:#373a3c;text-align:inherit;white-space:nowrap;background:none;border:0;cursor:default}.ctx-item:focus,.ctx-item:hover{color:#2b2d2f;text-decoration:none;background-color:#f5f5f5;cursor:normal}.ctx-item.active,.ctx-item.active:focus,.ctx-item.active:hover{color:#fff;text-decoration:none;background-color:#0275d8;outline:0}.ctx-item.disabled,.ctx-item.disabled:focus,.ctx-item.disabled:hover{color:#818a91}.ctx-item.disabled:focus,.ctx-item.disabled:hover{text-decoration:none;cursor:not-allowed;background-color:transparent;background-image:none;filter:\\\"progid:DXImageTransform.Microsoft.gradient(enabled = false)\\\"}.open>.ctx-menu{display:block}.open>a{outline:0}.ctx-menu-right{right:0;left:auto}.ctx-menu-left{right:auto;left:0}.ctx-header{display:block;padding:3px 20px;font-size:.9rem;line-height:1.5;color:#818a91;white-space:nowrap}.ctx-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}.pull-right>.ctx-menu{right:0;left:auto}.ctx-menu-container{position:fixed;padding:0;border:1px solid #bbb;background-color:#f5f5f5;z-index:99999;box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)}\", \"\"]);\n\n// exports\n"
+        },
+        {
+          "id": 5,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-html-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/selector.js?type=template&index=0!/Users/vin/v-ctx-menu/src/index.vue",
+          "name": "./~/vue-html-loader!./~/vue-loader/lib/selector.js?type=template&index=0!./src/index.vue",
+          "index": 8,
+          "index2": 6,
+          "size": 374,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "profile": {
+            "factory": 1323,
+            "building": 231
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 6,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+              "module": "./src/index.vue",
+              "moduleName": "./src/index.vue",
+              "type": "cjs require",
+              "userRequest": "!!vue-html-loader!./../node_modules/vue-loader/lib/selector.js?type=template&index=0!./index.vue",
+              "loc": "4:19-126"
+            }
+          ],
+          "source": "module.exports = \" <div v-el:context-menu @click.stop @contextmenu.stop :id=id class=ctx-menu-container :ctx=ctxFocus :style=ctxStyle> <div style=background-color:transparent class=\\\"ctx open\\\"> <ul role=menu class=ctx-menu :class=\\\"{\\n          'ctx-menu-right': align==='right',\\n          'ctx-menu-left': align==='left'\\n        }\\\"> <slot></slot> </ul> </div> </div> \";"
+        },
+        {
+          "id": 6,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "name": "./src/index.vue",
+          "index": 1,
+          "index2": 7,
+          "size": 667,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+          "profile": {
+            "factory": 8,
+            "building": 135
           },
           "failed": false,
           "errors": 0,
@@ -92,23 +270,23 @@
           "reasons": [
             {
               "moduleId": 0,
-              "moduleIdentifier": "/Users/vin/v-ctx-menu/build/common.js",
-              "module": "./build/common.js",
-              "moduleName": "./build/common.js",
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
               "type": "cjs require",
-              "userRequest": "../index.js",
-              "loc": "1:23-45"
+              "userRequest": "./index.vue",
+              "loc": "3:17-39"
             }
           ],
-          "source": "var __vueify_insert__ = require(\"vueify/lib/insert-css\")\nvar __vueify_style__ = __vueify_insert__.insert(\".ctx{position:relative}.ctx-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:.9rem;color:#373a3c;text-align:left;list-style:none;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.ctx-divider{height:1px;margin:.5rem 0;overflow:hidden;background-color:#e5e5e5}.ctx-item{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.5;color:#373a3c;text-align:inherit;white-space:nowrap;background:none;border:0;cursor:default}.ctx-item:focus,.ctx-item:hover{color:#2b2d2f;text-decoration:none;background-color:#f5f5f5;cursor:normal}.ctx-item.active,.ctx-item.active:focus,.ctx-item.active:hover{color:#fff;text-decoration:none;background-color:#0275d8;outline:0}.ctx-item.disabled,.ctx-item.disabled:focus,.ctx-item.disabled:hover{color:#818a91}.ctx-item.disabled:focus,.ctx-item.disabled:hover{text-decoration:none;cursor:not-allowed;background-color:transparent;background-image:none;filter:\\\"progid:DXImageTransform.Microsoft.gradient(enabled = false)\\\"}.open>.ctx-menu{display:block}.open>a{outline:0}.ctx-menu-right{right:0;left:auto}.ctx-menu-left{right:auto;left:0}.ctx-header{display:block;padding:3px 20px;font-size:.9rem;line-height:1.5;color:#818a91;white-space:nowrap}.ctx-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}.pull-right>.ctx-menu{right:0;left:auto}.ctx-menu-container{position:fixed;padding:0;border:1px solid #bbb;background-color:#f5f5f5;z-index:99999;box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)}\")\n\"use strict\";\nif (module.exports.__esModule) module.exports = module.exports.default\n;(typeof module.exports === \"function\"? module.exports.options: module.exports).template = \"<div v-el:context-menu @click.stop @contextmenu.stop :id=id class=ctx-menu-container :ctx=ctxFocus :style=ctxStyle><div style=background-color:transparent class=\\\"ctx open\\\"><ul role=menu class=ctx-menu :class=\\\"{\\n          'ctx-menu-right': align==='right',\\n          'ctx-menu-left': align==='left'\\n        }\\\"><slot></slot></ul></div></div>\"\n"
+          "source": "var __vue_script__, __vue_template__\nrequire(\"!!vue-style-loader!css-loader!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\")\n__vue_script__ = require(\"!!babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./ctx-menu.js\")\n__vue_template__ = require(\"!!vue-html-loader!./../node_modules/vue-loader/lib/selector.js?type=template&index=0!./index.vue\")\nmodule.exports = __vue_script__ || {}\nif (module.exports.__esModule) module.exports = module.exports.default\nif (__vue_template__) {\n(typeof module.exports === \"function\" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__\n}\n"
         },
         {
-          "id": 2,
-          "identifier": "/Users/vin/v-ctx-menu/node_modules/vueify/lib/insert-css.js",
-          "name": "./~/vueify/lib/insert-css.js",
-          "index": 2,
-          "index2": 0,
-          "size": 392,
+          "id": 7,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/addStyles.js",
+          "name": "./~/vue-style-loader/addStyles.js",
+          "index": 5,
+          "index2": 2,
+          "size": 6237,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -117,37 +295,73 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/vin/v-ctx-menu/index.js",
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
           "profile": {
-            "factory": 4,
-            "building": 9
+            "factory": 1645,
+            "building": 234
           },
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
             {
-              "moduleId": 1,
-              "moduleIdentifier": "/Users/vin/v-ctx-menu/index.js",
-              "module": "./index.js",
-              "moduleName": "./index.js",
+              "moduleId": 8,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+              "module": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+              "moduleName": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
               "type": "cjs require",
-              "userRequest": "vueify/lib/insert-css",
-              "loc": "1:24-56"
+              "userRequest": "!./../node_modules/vue-style-loader/addStyles.js",
+              "loc": "7:13-72"
             }
           ],
-          "source": "var inserted = exports.cache = {}\n\nexports.insert = function (css) {\n  if (inserted[css]) return\n  inserted[css] = true\n\n  var elem = document.createElement('style')\n  elem.setAttribute('type', 'text/css')\n\n  if ('textContent' in elem) {\n    elem.textContent = css\n  } else {\n    elem.styleSheet.cssText = css\n  }\n\n  document.getElementsByTagName('head')[0].appendChild(elem)\n  return elem\n}\n"
+          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\nvar stylesInDom = {},\n\tmemoize = function(fn) {\n\t\tvar memo;\n\t\treturn function () {\n\t\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\n\t\t\treturn memo;\n\t\t};\n\t},\n\tisOldIE = memoize(function() {\n\t\treturn /msie [6-9]\\b/.test(window.navigator.userAgent.toLowerCase());\n\t}),\n\tgetHeadElement = memoize(function () {\n\t\treturn document.head || document.getElementsByTagName(\"head\")[0];\n\t}),\n\tsingletonElement = null,\n\tsingletonCounter = 0,\n\tstyleElementsInsertedAtTop = [];\n\nmodule.exports = function(list, options) {\n\tif(typeof DEBUG !== \"undefined\" && DEBUG) {\n\t\tif(typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\n\t}\n\n\toptions = options || {};\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n\t// tags it will allow on a page\n\tif (typeof options.singleton === \"undefined\") options.singleton = isOldIE();\n\n\t// By default, add <style> tags to the bottom of <head>.\n\tif (typeof options.insertAt === \"undefined\") options.insertAt = \"bottom\";\n\n\tvar styles = listToStyles(list);\n\taddStylesToDom(styles, options);\n\n\treturn function update(newList) {\n\t\tvar mayRemove = [];\n\t\tfor(var i = 0; i < styles.length; i++) {\n\t\t\tvar item = styles[i];\n\t\t\tvar domStyle = stylesInDom[item.id];\n\t\t\tdomStyle.refs--;\n\t\t\tmayRemove.push(domStyle);\n\t\t}\n\t\tif(newList) {\n\t\t\tvar newStyles = listToStyles(newList);\n\t\t\taddStylesToDom(newStyles, options);\n\t\t}\n\t\tfor(var i = 0; i < mayRemove.length; i++) {\n\t\t\tvar domStyle = mayRemove[i];\n\t\t\tif(domStyle.refs === 0) {\n\t\t\t\tfor(var j = 0; j < domStyle.parts.length; j++)\n\t\t\t\t\tdomStyle.parts[j]();\n\t\t\t\tdelete stylesInDom[domStyle.id];\n\t\t\t}\n\t\t}\n\t};\n}\n\nfunction addStylesToDom(styles, options) {\n\tfor(var i = 0; i < styles.length; i++) {\n\t\tvar item = styles[i];\n\t\tvar domStyle = stylesInDom[item.id];\n\t\tif(domStyle) {\n\t\t\tdomStyle.refs++;\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\n\t\t\t}\n\t\t\tfor(; j < item.parts.length; j++) {\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t} else {\n\t\t\tvar parts = [];\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\n\t\t}\n\t}\n}\n\nfunction listToStyles(list) {\n\tvar styles = [];\n\tvar newStyles = {};\n\tfor(var i = 0; i < list.length; i++) {\n\t\tvar item = list[i];\n\t\tvar id = item[0];\n\t\tvar css = item[1];\n\t\tvar media = item[2];\n\t\tvar sourceMap = item[3];\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\n\t\tif(!newStyles[id])\n\t\t\tstyles.push(newStyles[id] = {id: id, parts: [part]});\n\t\telse\n\t\t\tnewStyles[id].parts.push(part);\n\t}\n\treturn styles;\n}\n\nfunction insertStyleElement(options, styleElement) {\n\tvar head = getHeadElement();\n\tvar lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];\n\tif (options.insertAt === \"top\") {\n\t\tif(!lastStyleElementInsertedAtTop) {\n\t\t\thead.insertBefore(styleElement, head.firstChild);\n\t\t} else if(lastStyleElementInsertedAtTop.nextSibling) {\n\t\t\thead.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);\n\t\t} else {\n\t\t\thead.appendChild(styleElement);\n\t\t}\n\t\tstyleElementsInsertedAtTop.push(styleElement);\n\t} else if (options.insertAt === \"bottom\") {\n\t\thead.appendChild(styleElement);\n\t} else {\n\t\tthrow new Error(\"Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.\");\n\t}\n}\n\nfunction removeStyleElement(styleElement) {\n\tstyleElement.parentNode.removeChild(styleElement);\n\tvar idx = styleElementsInsertedAtTop.indexOf(styleElement);\n\tif(idx >= 0) {\n\t\tstyleElementsInsertedAtTop.splice(idx, 1);\n\t}\n}\n\nfunction createStyleElement(options) {\n\tvar styleElement = document.createElement(\"style\");\n\tstyleElement.type = \"text/css\";\n\tinsertStyleElement(options, styleElement);\n\treturn styleElement;\n}\n\nfunction addStyle(obj, options) {\n\tvar styleElement, update, remove;\n\n\tif (options.singleton) {\n\t\tvar styleIndex = singletonCounter++;\n\t\tstyleElement = singletonElement || (singletonElement = createStyleElement(options));\n\t\tupdate = applyToSingletonTag.bind(null, styleElement, styleIndex, false);\n\t\tremove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);\n\t} else {\n\t\tstyleElement = createStyleElement(options);\n\t\tupdate = applyToTag.bind(null, styleElement);\n\t\tremove = function() {\n\t\t\tremoveStyleElement(styleElement);\n\t\t};\n\t}\n\n\tupdate(obj);\n\n\treturn function updateStyle(newObj) {\n\t\tif(newObj) {\n\t\t\tif(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)\n\t\t\t\treturn;\n\t\t\tupdate(obj = newObj);\n\t\t} else {\n\t\t\tremove();\n\t\t}\n\t};\n}\n\nvar replaceText = (function () {\n\tvar textStore = [];\n\n\treturn function (index, replacement) {\n\t\ttextStore[index] = replacement;\n\t\treturn textStore.filter(Boolean).join('\\n');\n\t};\n})();\n\nfunction applyToSingletonTag(styleElement, index, remove, obj) {\n\tvar css = remove ? \"\" : obj.css;\n\n\tif (styleElement.styleSheet) {\n\t\tstyleElement.styleSheet.cssText = replaceText(index, css);\n\t} else {\n\t\tvar cssNode = document.createTextNode(css);\n\t\tvar childNodes = styleElement.childNodes;\n\t\tif (childNodes[index]) styleElement.removeChild(childNodes[index]);\n\t\tif (childNodes.length) {\n\t\t\tstyleElement.insertBefore(cssNode, childNodes[index]);\n\t\t} else {\n\t\t\tstyleElement.appendChild(cssNode);\n\t\t}\n\t}\n}\n\nfunction applyToTag(styleElement, obj) {\n\tvar css = obj.css;\n\tvar media = obj.media;\n\tvar sourceMap = obj.sourceMap;\n\n\tif (media) {\n\t\tstyleElement.setAttribute(\"media\", media);\n\t}\n\n\tif (sourceMap) {\n\t\t// https://developer.chrome.com/devtools/docs/javascript-debugging\n\t\t// this makes source maps inside style tags work properly in Chrome\n\t\tcss += '\\n/*# sourceURL=' + sourceMap.sources[0] + ' */';\n\t\t// http://stackoverflow.com/a/26603875\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\n\t}\n\n\tif (styleElement.styleSheet) {\n\t\tstyleElement.styleSheet.cssText = css;\n\t} else {\n\t\twhile(styleElement.firstChild) {\n\t\t\tstyleElement.removeChild(styleElement.firstChild);\n\t\t}\n\t\tstyleElement.appendChild(document.createTextNode(css));\n\t}\n}\n"
+        },
+        {
+          "id": 8,
+          "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+          "name": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "index": 2,
+          "index2": 3,
+          "size": 1073,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "profile": {
+            "factory": 34,
+            "building": 10
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 6,
+              "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+              "module": "./src/index.vue",
+              "moduleName": "./src/index.vue",
+              "type": "cjs require",
+              "userRequest": "!!vue-style-loader!css-loader!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css",
+              "loc": "2:0-106"
+            }
+          ],
+          "source": "// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = require(\"!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\");\nif(typeof content === 'string') content = [[module.id, content, '']];\n// add the styles to the DOM\nvar update = require(\"!./../node_modules/vue-style-loader/addStyles.js\")(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(module.hot) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\", function() {\n\t\t\tvar newContent = require(\"!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.id, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}"
         }
       ],
       "filteredModules": 0,
       "origins": [
         {
           "moduleId": 0,
-          "module": "/Users/vin/v-ctx-menu/build/common.js",
-          "moduleIdentifier": "/Users/vin/v-ctx-menu/build/common.js",
-          "moduleName": "./build/common.js",
+          "module": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+          "moduleName": "./src/index.js",
           "loc": "",
-          "name": "v-context-menu",
+          "name": "main",
           "reasons": []
         }
       ]
@@ -156,11 +370,11 @@
   "modules": [
     {
       "id": 0,
-      "identifier": "/Users/vin/v-ctx-menu/build/common.js",
-      "name": "./build/common.js",
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+      "name": "./src/index.js",
       "index": 0,
-      "index2": 2,
-      "size": 46,
+      "index2": 8,
+      "size": 55,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -171,22 +385,22 @@
       "assets": [],
       "issuer": null,
       "profile": {
-        "factory": 14,
-        "building": 13
+        "factory": 19,
+        "building": 369
       },
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [],
-      "source": "window.componentName = require('../index.js')\n"
+      "source": "'use strict';\n\nmodule.exports = require('./index.vue');"
     },
     {
       "id": 1,
-      "identifier": "/Users/vin/v-ctx-menu/index.js",
-      "name": "./index.js",
-      "index": 1,
-      "index2": 1,
-      "size": 2281,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/lib/css-base.js",
+      "name": "./~/css-loader/lib/css-base.js",
+      "index": 4,
+      "index2": 0,
+      "size": 973,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -195,10 +409,190 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/vin/v-ctx-menu/build/common.js",
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+      "profile": {
+        "factory": 27,
+        "building": 56
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+          "module": "./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "moduleName": "./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "type": "cjs require",
+          "userRequest": "./../node_modules/css-loader/lib/css-base.js",
+          "loc": "1:27-82"
+        }
+      ],
+      "source": "\"use strict\";\n\nmodule.exports = function () {\n\tvar list = [];\n\n\tlist.toString = function toString() {\n\t\tvar result = [];\n\t\tfor (var i = 0; i < this.length; i++) {\n\t\t\tvar item = this[i];\n\t\t\tif (item[2]) {\n\t\t\t\tresult.push(\"@media \" + item[2] + \"{\" + item[1] + \"}\");\n\t\t\t} else {\n\t\t\t\tresult.push(item[1]);\n\t\t\t}\n\t\t}\n\t\treturn result.join(\"\");\n\t};\n\n\tlist.i = function (modules, mediaQuery) {\n\t\tif (typeof modules === \"string\") modules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor (var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif (typeof id === \"number\") alreadyImportedModules[id] = true;\n\t\t}\n\t\tfor (i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\n\t\t\tif (typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif (mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if (mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};"
+    },
+    {
+      "id": 2,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/body-click-listener.js",
+      "name": "./src/body-click-listener.js",
+      "index": 7,
+      "index2": 4,
+      "size": 844,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js?presets[]=es2015&plugins[]=transform-runtime&comments=false!/Users/vin/v-ctx-menu/src/ctx-menu.js",
+      "profile": {
+        "factory": 2,
+        "building": 258
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js?presets[]=es2015&plugins[]=transform-runtime&comments=false!/Users/vin/v-ctx-menu/src/ctx-menu.js",
+          "module": "./~/babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./src/ctx-menu.js",
+          "moduleName": "./~/babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./src/ctx-menu.js",
+          "type": "cjs require",
+          "userRequest": "./body-click-listener",
+          "loc": "7:25-57"
+        }
+      ],
+      "source": "'use strict';\n\nmodule.exports = function createBodyClickListener(fn) {\n  var isListening = false;\n\n  return {\n    get isListening() {\n      return isListening;\n    },\n\n    start: function start(cb) {\n      window.addEventListener('click', _onclick, true);\n      window.addEventListener('keyup', _onescape, true);\n      isListening = true;\n      if (typeof cb === 'function') cb();\n    },\n    stop: function stop(cb) {\n      window.removeEventListener('click', _onclick, true);\n      window.removeEventListener('keyup', _onescape, true);\n      isListening = false;\n      if (typeof cb === 'function') cb();\n    }\n  };\n\n  function _onclick(e) {\n    if (!e.target.tagName !== 'BODY') {\n      e.preventDefault();\n    }\n    if (typeof fn === 'function') fn(e);\n    stop();\n  }\n\n  function _onescape(e) {\n    if (e.keyCode === 27) _onclick(e);\n  }\n};"
+    },
+    {
+      "id": 3,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js?presets[]=es2015&plugins[]=transform-runtime&comments=false!/Users/vin/v-ctx-menu/src/ctx-menu.js",
+      "name": "./~/babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./src/ctx-menu.js",
+      "index": 6,
+      "index2": 5,
+      "size": 1953,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+      "profile": {
+        "factory": 32,
+        "building": 1656
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 6,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "module": "./src/index.vue",
+          "moduleName": "./src/index.vue",
+          "type": "cjs require",
+          "userRequest": "!!babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./ctx-menu.js",
+          "loc": "3:17-116"
+        }
+      ],
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _bodyClickListener = require('./body-click-listener');\n\nvar _bodyClickListener2 = _interopRequireDefault(_bodyClickListener);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = {\n  name: 'context-menu',\n  props: {\n    id: {\n      type: String,\n      default: 'default-ctx'\n    }\n  },\n  data: function data() {\n    var _this = this;\n\n    return {\n      locals: {},\n      ctxTop: 0,\n      ctxLeft: 0,\n      ctxVisible: false,\n      bodyClickListener: (0, _bodyClickListener2.default)(function (e) {\n        var isOpen = !!_this.ctxVisible;\n        var outsideClick = isOpen && !_this.$el.contains(e.target);\n        _this.ctxVisible = false;\n\n        if (outsideClick) {\n          _this.$emit('ctx-cancel', _this.locals);\n          e.stopPropagation();\n        } else {\n          _this.$emit('ctx-close', _this.locals);\n        }\n      })\n    };\n  },\n\n  methods: {\n    setPositionFromEvent: function setPositionFromEvent(e) {\n      var pageX = e.pageX;\n      var pageY = e.pageY;\n\n      this.ctxTop = pageY - document.body.scrollTop;\n      this.ctxLeft = pageX;\n    },\n    open: function open(e, data) {\n      if (this.ctxVisible) this.ctxVisible = false;\n      this.ctxVisible = true;\n      this.$emit('ctx-open', this.locals = data || {});\n      this.setPositionFromEvent(e);\n      this.$el.setAttribute('tab-index', -1);\n      this.bodyClickListener.start();\n      return this;\n    }\n  },\n  watch: {\n    ctxVisible: function ctxVisible(newVal, oldVal) {\n      if (oldVal === true && newVal === false) {\n        this.bodyClickListener.stop(function (e) {});\n      }\n    }\n  },\n  computed: {\n    ctxStyle: function ctxStyle() {\n      return {\n        'display': this.ctxVisible ? 'block' : 'none',\n        'top': (this.ctxTop || 0) + 'px',\n        'left': (this.ctxLeft || 0) + 'px'\n      };\n    }\n  }\n};"
+    },
+    {
+      "id": 4,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+      "name": "./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+      "index": 3,
+      "index2": 1,
+      "size": 1767,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
       "profile": {
         "factory": 1,
-        "building": 9
+        "building": 1851
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 8,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+          "module": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "moduleName": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "type": "cjs require",
+          "userRequest": "!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css",
+          "loc": "4:14-130"
+        }
+      ],
+      "source": "exports = module.exports = require(\"./../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".ctx{position:relative}.ctx-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:.9rem;color:#373a3c;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.ctx-divider{height:1px;margin:.5rem 0;overflow:hidden;background-color:#e5e5e5}.ctx-item{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.5;color:#373a3c;text-align:inherit;white-space:nowrap;background:none;border:0;cursor:default}.ctx-item:focus,.ctx-item:hover{color:#2b2d2f;text-decoration:none;background-color:#f5f5f5;cursor:normal}.ctx-item.active,.ctx-item.active:focus,.ctx-item.active:hover{color:#fff;text-decoration:none;background-color:#0275d8;outline:0}.ctx-item.disabled,.ctx-item.disabled:focus,.ctx-item.disabled:hover{color:#818a91}.ctx-item.disabled:focus,.ctx-item.disabled:hover{text-decoration:none;cursor:not-allowed;background-color:transparent;background-image:none;filter:\\\"progid:DXImageTransform.Microsoft.gradient(enabled = false)\\\"}.open>.ctx-menu{display:block}.open>a{outline:0}.ctx-menu-right{right:0;left:auto}.ctx-menu-left{right:auto;left:0}.ctx-header{display:block;padding:3px 20px;font-size:.9rem;line-height:1.5;color:#818a91;white-space:nowrap}.ctx-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}.pull-right>.ctx-menu{right:0;left:auto}.ctx-menu-container{position:fixed;padding:0;border:1px solid #bbb;background-color:#f5f5f5;z-index:99999;box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)}\", \"\"]);\n\n// exports\n"
+    },
+    {
+      "id": 5,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-html-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/selector.js?type=template&index=0!/Users/vin/v-ctx-menu/src/index.vue",
+      "name": "./~/vue-html-loader!./~/vue-loader/lib/selector.js?type=template&index=0!./src/index.vue",
+      "index": 8,
+      "index2": 6,
+      "size": 374,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+      "profile": {
+        "factory": 1323,
+        "building": 231
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 6,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "module": "./src/index.vue",
+          "moduleName": "./src/index.vue",
+          "type": "cjs require",
+          "userRequest": "!!vue-html-loader!./../node_modules/vue-loader/lib/selector.js?type=template&index=0!./index.vue",
+          "loc": "4:19-126"
+        }
+      ],
+      "source": "module.exports = \" <div v-el:context-menu @click.stop @contextmenu.stop :id=id class=ctx-menu-container :ctx=ctxFocus :style=ctxStyle> <div style=background-color:transparent class=\\\"ctx open\\\"> <ul role=menu class=ctx-menu :class=\\\"{\\n          'ctx-menu-right': align==='right',\\n          'ctx-menu-left': align==='left'\\n        }\\\"> <slot></slot> </ul> </div> </div> \";"
+    },
+    {
+      "id": 6,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+      "name": "./src/index.vue",
+      "index": 1,
+      "index2": 7,
+      "size": 667,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+      "profile": {
+        "factory": 8,
+        "building": 135
       },
       "failed": false,
       "errors": 0,
@@ -206,23 +600,23 @@
       "reasons": [
         {
           "moduleId": 0,
-          "moduleIdentifier": "/Users/vin/v-ctx-menu/build/common.js",
-          "module": "./build/common.js",
-          "moduleName": "./build/common.js",
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/babel-loader/index.js!/Users/vin/v-ctx-menu/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
           "type": "cjs require",
-          "userRequest": "../index.js",
-          "loc": "1:23-45"
+          "userRequest": "./index.vue",
+          "loc": "3:17-39"
         }
       ],
-      "source": "var __vueify_insert__ = require(\"vueify/lib/insert-css\")\nvar __vueify_style__ = __vueify_insert__.insert(\".ctx{position:relative}.ctx-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:.9rem;color:#373a3c;text-align:left;list-style:none;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.ctx-divider{height:1px;margin:.5rem 0;overflow:hidden;background-color:#e5e5e5}.ctx-item{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.5;color:#373a3c;text-align:inherit;white-space:nowrap;background:none;border:0;cursor:default}.ctx-item:focus,.ctx-item:hover{color:#2b2d2f;text-decoration:none;background-color:#f5f5f5;cursor:normal}.ctx-item.active,.ctx-item.active:focus,.ctx-item.active:hover{color:#fff;text-decoration:none;background-color:#0275d8;outline:0}.ctx-item.disabled,.ctx-item.disabled:focus,.ctx-item.disabled:hover{color:#818a91}.ctx-item.disabled:focus,.ctx-item.disabled:hover{text-decoration:none;cursor:not-allowed;background-color:transparent;background-image:none;filter:\\\"progid:DXImageTransform.Microsoft.gradient(enabled = false)\\\"}.open>.ctx-menu{display:block}.open>a{outline:0}.ctx-menu-right{right:0;left:auto}.ctx-menu-left{right:auto;left:0}.ctx-header{display:block;padding:3px 20px;font-size:.9rem;line-height:1.5;color:#818a91;white-space:nowrap}.ctx-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}.pull-right>.ctx-menu{right:0;left:auto}.ctx-menu-container{position:fixed;padding:0;border:1px solid #bbb;background-color:#f5f5f5;z-index:99999;box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)}\")\n\"use strict\";\nif (module.exports.__esModule) module.exports = module.exports.default\n;(typeof module.exports === \"function\"? module.exports.options: module.exports).template = \"<div v-el:context-menu @click.stop @contextmenu.stop :id=id class=ctx-menu-container :ctx=ctxFocus :style=ctxStyle><div style=background-color:transparent class=\\\"ctx open\\\"><ul role=menu class=ctx-menu :class=\\\"{\\n          'ctx-menu-right': align==='right',\\n          'ctx-menu-left': align==='left'\\n        }\\\"><slot></slot></ul></div></div>\"\n"
+      "source": "var __vue_script__, __vue_template__\nrequire(\"!!vue-style-loader!css-loader!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\")\n__vue_script__ = require(\"!!babel-loader?presets[]=es2015&plugins[]=transform-runtime&comments=false!./ctx-menu.js\")\n__vue_template__ = require(\"!!vue-html-loader!./../node_modules/vue-loader/lib/selector.js?type=template&index=0!./index.vue\")\nmodule.exports = __vue_script__ || {}\nif (module.exports.__esModule) module.exports = module.exports.default\nif (__vue_template__) {\n(typeof module.exports === \"function\" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__\n}\n"
     },
     {
-      "id": 2,
-      "identifier": "/Users/vin/v-ctx-menu/node_modules/vueify/lib/insert-css.js",
-      "name": "./~/vueify/lib/insert-css.js",
-      "index": 2,
-      "index2": 0,
-      "size": 392,
+      "id": 7,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/addStyles.js",
+      "name": "./~/vue-style-loader/addStyles.js",
+      "index": 5,
+      "index2": 2,
+      "size": 6237,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -231,26 +625,62 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/vin/v-ctx-menu/index.js",
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
       "profile": {
-        "factory": 4,
-        "building": 9
+        "factory": 1645,
+        "building": 234
       },
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 1,
-          "moduleIdentifier": "/Users/vin/v-ctx-menu/index.js",
-          "module": "./index.js",
-          "moduleName": "./index.js",
+          "moduleId": 8,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+          "module": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+          "moduleName": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
           "type": "cjs require",
-          "userRequest": "vueify/lib/insert-css",
-          "loc": "1:24-56"
+          "userRequest": "!./../node_modules/vue-style-loader/addStyles.js",
+          "loc": "7:13-72"
         }
       ],
-      "source": "var inserted = exports.cache = {}\n\nexports.insert = function (css) {\n  if (inserted[css]) return\n  inserted[css] = true\n\n  var elem = document.createElement('style')\n  elem.setAttribute('type', 'text/css')\n\n  if ('textContent' in elem) {\n    elem.textContent = css\n  } else {\n    elem.styleSheet.cssText = css\n  }\n\n  document.getElementsByTagName('head')[0].appendChild(elem)\n  return elem\n}\n"
+      "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\nvar stylesInDom = {},\n\tmemoize = function(fn) {\n\t\tvar memo;\n\t\treturn function () {\n\t\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\n\t\t\treturn memo;\n\t\t};\n\t},\n\tisOldIE = memoize(function() {\n\t\treturn /msie [6-9]\\b/.test(window.navigator.userAgent.toLowerCase());\n\t}),\n\tgetHeadElement = memoize(function () {\n\t\treturn document.head || document.getElementsByTagName(\"head\")[0];\n\t}),\n\tsingletonElement = null,\n\tsingletonCounter = 0,\n\tstyleElementsInsertedAtTop = [];\n\nmodule.exports = function(list, options) {\n\tif(typeof DEBUG !== \"undefined\" && DEBUG) {\n\t\tif(typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\n\t}\n\n\toptions = options || {};\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n\t// tags it will allow on a page\n\tif (typeof options.singleton === \"undefined\") options.singleton = isOldIE();\n\n\t// By default, add <style> tags to the bottom of <head>.\n\tif (typeof options.insertAt === \"undefined\") options.insertAt = \"bottom\";\n\n\tvar styles = listToStyles(list);\n\taddStylesToDom(styles, options);\n\n\treturn function update(newList) {\n\t\tvar mayRemove = [];\n\t\tfor(var i = 0; i < styles.length; i++) {\n\t\t\tvar item = styles[i];\n\t\t\tvar domStyle = stylesInDom[item.id];\n\t\t\tdomStyle.refs--;\n\t\t\tmayRemove.push(domStyle);\n\t\t}\n\t\tif(newList) {\n\t\t\tvar newStyles = listToStyles(newList);\n\t\t\taddStylesToDom(newStyles, options);\n\t\t}\n\t\tfor(var i = 0; i < mayRemove.length; i++) {\n\t\t\tvar domStyle = mayRemove[i];\n\t\t\tif(domStyle.refs === 0) {\n\t\t\t\tfor(var j = 0; j < domStyle.parts.length; j++)\n\t\t\t\t\tdomStyle.parts[j]();\n\t\t\t\tdelete stylesInDom[domStyle.id];\n\t\t\t}\n\t\t}\n\t};\n}\n\nfunction addStylesToDom(styles, options) {\n\tfor(var i = 0; i < styles.length; i++) {\n\t\tvar item = styles[i];\n\t\tvar domStyle = stylesInDom[item.id];\n\t\tif(domStyle) {\n\t\t\tdomStyle.refs++;\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\n\t\t\t}\n\t\t\tfor(; j < item.parts.length; j++) {\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t} else {\n\t\t\tvar parts = [];\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\n\t\t}\n\t}\n}\n\nfunction listToStyles(list) {\n\tvar styles = [];\n\tvar newStyles = {};\n\tfor(var i = 0; i < list.length; i++) {\n\t\tvar item = list[i];\n\t\tvar id = item[0];\n\t\tvar css = item[1];\n\t\tvar media = item[2];\n\t\tvar sourceMap = item[3];\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\n\t\tif(!newStyles[id])\n\t\t\tstyles.push(newStyles[id] = {id: id, parts: [part]});\n\t\telse\n\t\t\tnewStyles[id].parts.push(part);\n\t}\n\treturn styles;\n}\n\nfunction insertStyleElement(options, styleElement) {\n\tvar head = getHeadElement();\n\tvar lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];\n\tif (options.insertAt === \"top\") {\n\t\tif(!lastStyleElementInsertedAtTop) {\n\t\t\thead.insertBefore(styleElement, head.firstChild);\n\t\t} else if(lastStyleElementInsertedAtTop.nextSibling) {\n\t\t\thead.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);\n\t\t} else {\n\t\t\thead.appendChild(styleElement);\n\t\t}\n\t\tstyleElementsInsertedAtTop.push(styleElement);\n\t} else if (options.insertAt === \"bottom\") {\n\t\thead.appendChild(styleElement);\n\t} else {\n\t\tthrow new Error(\"Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.\");\n\t}\n}\n\nfunction removeStyleElement(styleElement) {\n\tstyleElement.parentNode.removeChild(styleElement);\n\tvar idx = styleElementsInsertedAtTop.indexOf(styleElement);\n\tif(idx >= 0) {\n\t\tstyleElementsInsertedAtTop.splice(idx, 1);\n\t}\n}\n\nfunction createStyleElement(options) {\n\tvar styleElement = document.createElement(\"style\");\n\tstyleElement.type = \"text/css\";\n\tinsertStyleElement(options, styleElement);\n\treturn styleElement;\n}\n\nfunction addStyle(obj, options) {\n\tvar styleElement, update, remove;\n\n\tif (options.singleton) {\n\t\tvar styleIndex = singletonCounter++;\n\t\tstyleElement = singletonElement || (singletonElement = createStyleElement(options));\n\t\tupdate = applyToSingletonTag.bind(null, styleElement, styleIndex, false);\n\t\tremove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);\n\t} else {\n\t\tstyleElement = createStyleElement(options);\n\t\tupdate = applyToTag.bind(null, styleElement);\n\t\tremove = function() {\n\t\t\tremoveStyleElement(styleElement);\n\t\t};\n\t}\n\n\tupdate(obj);\n\n\treturn function updateStyle(newObj) {\n\t\tif(newObj) {\n\t\t\tif(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)\n\t\t\t\treturn;\n\t\t\tupdate(obj = newObj);\n\t\t} else {\n\t\t\tremove();\n\t\t}\n\t};\n}\n\nvar replaceText = (function () {\n\tvar textStore = [];\n\n\treturn function (index, replacement) {\n\t\ttextStore[index] = replacement;\n\t\treturn textStore.filter(Boolean).join('\\n');\n\t};\n})();\n\nfunction applyToSingletonTag(styleElement, index, remove, obj) {\n\tvar css = remove ? \"\" : obj.css;\n\n\tif (styleElement.styleSheet) {\n\t\tstyleElement.styleSheet.cssText = replaceText(index, css);\n\t} else {\n\t\tvar cssNode = document.createTextNode(css);\n\t\tvar childNodes = styleElement.childNodes;\n\t\tif (childNodes[index]) styleElement.removeChild(childNodes[index]);\n\t\tif (childNodes.length) {\n\t\t\tstyleElement.insertBefore(cssNode, childNodes[index]);\n\t\t} else {\n\t\t\tstyleElement.appendChild(cssNode);\n\t\t}\n\t}\n}\n\nfunction applyToTag(styleElement, obj) {\n\tvar css = obj.css;\n\tvar media = obj.media;\n\tvar sourceMap = obj.sourceMap;\n\n\tif (media) {\n\t\tstyleElement.setAttribute(\"media\", media);\n\t}\n\n\tif (sourceMap) {\n\t\t// https://developer.chrome.com/devtools/docs/javascript-debugging\n\t\t// this makes source maps inside style tags work properly in Chrome\n\t\tcss += '\\n/*# sourceURL=' + sourceMap.sources[0] + ' */';\n\t\t// http://stackoverflow.com/a/26603875\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\n\t}\n\n\tif (styleElement.styleSheet) {\n\t\tstyleElement.styleSheet.cssText = css;\n\t} else {\n\t\twhile(styleElement.firstChild) {\n\t\t\tstyleElement.removeChild(styleElement.firstChild);\n\t\t}\n\t\tstyleElement.appendChild(document.createTextNode(css));\n\t}\n}\n"
+    },
+    {
+      "id": 8,
+      "identifier": "/Users/vin/v-ctx-menu/node_modules/vue-style-loader/index.js!/Users/vin/v-ctx-menu/node_modules/css-loader/index.js!/Users/vin/v-ctx-menu/node_modules/vue-loader/lib/style-rewriter.js!/Users/vin/v-ctx-menu/src/ctx-menu.css",
+      "name": "./~/vue-style-loader!./~/css-loader!./~/vue-loader/lib/style-rewriter.js!./src/ctx-menu.css",
+      "index": 2,
+      "index2": 3,
+      "size": 1073,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+      "profile": {
+        "factory": 34,
+        "building": 10
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 6,
+          "moduleIdentifier": "/Users/vin/v-ctx-menu/node_modules/vue-loader/index.js!/Users/vin/v-ctx-menu/src/index.vue",
+          "module": "./src/index.vue",
+          "moduleName": "./src/index.vue",
+          "type": "cjs require",
+          "userRequest": "!!vue-style-loader!css-loader!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css",
+          "loc": "2:0-106"
+        }
+      ],
+      "source": "// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = require(\"!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\");\nif(typeof content === 'string') content = [[module.id, content, '']];\n// add the styles to the DOM\nvar update = require(\"!./../node_modules/vue-style-loader/addStyles.js\")(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(module.hot) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\", function() {\n\t\t\tvar newContent = require(\"!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./ctx-menu.css\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.id, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}"
     }
   ],
   "filteredModules": 0,
