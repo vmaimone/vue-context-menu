@@ -4,7 +4,7 @@
  * If useCapture is set to false, the handlers fire backward
  */
 module.exports = function createBodyClickListener(fn) {
-  let isListening = false
+  var isListening = false
 
   /* === public api ========================================== */
   return {
