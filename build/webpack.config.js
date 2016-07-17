@@ -8,5 +8,17 @@ module.exports = {
     },
     plugins: [
       new webpack.optimize.OccurenceOrderPlugin()
-    ]
+    ],
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel'
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue'
+            }
+        ]
+    }
 }

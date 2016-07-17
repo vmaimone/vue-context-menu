@@ -1,10 +1,10 @@
 /**
  * When listening for an outside click, we set useCapture = true.
  * This way, we can prevent other click listeners from firing when performing the 'click-out'.
- * If useCapture is set to false, the handlers fire backward
+ * If useCapture is set to false, the handlers fire backwards
  */
 module.exports = function createBodyClickListener(fn) {
-  var isListening = false
+  let isListening = false
 
   /* === public api ========================================== */
   return {
@@ -29,7 +29,7 @@ module.exports = function createBodyClickListener(fn) {
 
   /* === private helpers ===================================== */
   function _onclick (e) {
-    e.stopPropagation()
+    // e.stopPropagation()
     if (!e.target.tagName !== 'BODY') {
       e.preventDefault()
     }

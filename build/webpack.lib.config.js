@@ -9,13 +9,4 @@ config.output = {
 }
 config.plugins.push(new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}))
 
-config.module = {
-  loaders: [
-    {
-      test: /\.vue$/,
-      loader: 'vue'
-    }
-  ]
-}
-
 module.exports = config

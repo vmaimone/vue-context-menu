@@ -1,18 +1,10 @@
 import createBodyClickListener from './body-click-listener'
 
-const EVENT_LIST = ['click', 'contextmenu', 'keydown']
+// const EVENT_LIST = ['click', 'contextmenu', 'keydown']
 
 export default {
   name: 'context-menu',
   props: {
-    ctxVisible: {
-      type: Boolean,
-      twoWay: true
-    },
-    ctxData: {
-      type: Object,
-      twoWay: true
-    },
     id: {
       type: String,
       default: 'default-ctx'
@@ -20,42 +12,27 @@ export default {
   },
   data() {
     return {
+      locals: {},
       ctxTop: 0,
       ctxLeft: 0,
-      bodyClickListener: createBodyClickListener((e) => {
-        this.resetCtx()
-        this.removeEvents()
-      })
+      ctxVisible: false,
+      bodyClickListener: createBodyClickListener(
+        (e) => {
+          let isOpen = !!this.ctxVisible
+          let outsideClick = isOpen && !this.$el.contains(e.target)
+          this.ctxVisible = false
+
+          if (outsideClick) {
+            this.$emit('ctx-cancel', this.locals)
+            e.stopPropagation()
+          } else {
+            this.$emit('ctx-close', this.locals)
+          }
+        }
+      )
     }
   },
   methods: {
-    resetCtx(cb) {
-      let data = Object.assign({}, this.ctxData || {})
-      if (typeof cb === 'function') {
-        cb(data)
-      }
-      this.ctxData = {}
-      this.ctxVisible = false
-    },
-
-    removeEvents() {
-      EVENT_LIST.forEach(key => {
-        this.$el.removeEventListener(key, this.listener)
-      })
-    },
-
-    addEvents() {
-      EVENT_LIST.forEach(key => {
-        this.$el.addEventListener(key, this.listener)
-      })
-    },
-
-    listener(e) {
-      this.resetCtx()
-      e.stopPropagation()
-      e.preventDefault()
-      this.removeEvents()
-    },
 
     setPositionFromEvent(e) {
       const { pageX, pageY } = e
@@ -64,11 +41,10 @@ export default {
     },
 
     open(e, data) {
-      this.ctxVisible = false
-      this.ctxData = data
-      this.setPositionFromEvent(e)
-      this.addEvents()
+      if (this.ctxVisible) this.ctxVisible = false
       this.ctxVisible = true
+      this.$emit('ctx-open', this.locals = data || {})
+      this.setPositionFromEvent(e)
       this.$el.setAttribute('tab-index', -1)
       this.bodyClickListener.start()
       return this
@@ -77,7 +53,10 @@ export default {
   watch: {
     ctxVisible(newVal, oldVal) {
       if (oldVal === true && newVal === false) {
-        this.bodyClickListener.stop(() => console.log('closed context menu'))
+        this.bodyClickListener.stop((e) => {
+          // console.log('context menu sequence finished', e)
+          // this.locals = {}
+        })
       }
     }
   },
