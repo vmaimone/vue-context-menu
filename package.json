@@ -46,7 +46,7 @@
     "test": "karma start test/karma.conf.js --browsers Chrome --single-run",
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags && npm publish",
-    "ghpages": "vue-dev-server --static static/ && gh-pages -d static"
+    "ghpages": "gh-pages -d static"
   },
   "directories": {
     "test": "test"
