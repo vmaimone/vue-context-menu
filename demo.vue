@@ -4,11 +4,12 @@
       v-for="color in colors"
       class="colored-box"
       :style="{background: color}"
+      @click="sayColor(color)"
       @contextmenu.prevent="$refs.ctx.open($event, {color: color, index: $index})">
     </div>
 
     <div class="rhs">
-      Selection: <pre class="example">{{ menuData | json }}</pre>
+      Local Menu Data: <pre class="example">{{ menuData | json }}</pre>
     </div>
     <div style="clear:both;"></div>
 
@@ -17,12 +18,8 @@
     <pre class="example">{{ contextClicks | json }}</pre>
 
 
-    <context-menu
-      id="testingctx"
-      v-ref:ctx
-      :ctx-data.sync="menuData"
-      :ctx-visible.sync="showCtx">
-        <li class="ctx-header" v-if="menuData!==null">{{menuData.color}}</li>
+    <context-menu id="testingctx" v-ref:ctx @ctx-open="onCtxOpen" @ctx-cancel="resetCtxLocals" @ctx-close="onCtxClose">
+        <li class="ctx-header">{{menuData.color}}</li>
         <li class="ctx-item">option one</li>
         <li class="ctx-item disabled">option two (disabled)</li>
         <li class="ctx-item" @click="logClick($event, menuData)">add to log</li>
@@ -36,10 +33,10 @@
   }
 
   .colored-box {
-    height: 10vh;
-    width: 10vh;
+    height: 11vh;
+    width: 11vh;
     display: inline-block;
-    margin: .5rem;
+    margin: .25rem;
   }
 
   .example {
@@ -51,28 +48,55 @@
   .rhs {
     float: right;
     width: 40vw;
-    padding: .5rem 0;
+    padding: .5rem 0 1rem 0;
   }
 </style>
 <script>
 import { default as contextMenu } from '../src/index.vue'
+
+const newMenuData = () => ({ color: null })
+
 export default {
   components: {
     contextMenu
   },
   data() {
     return {
-      colors: ['pink', 'lightblue', 'green', 'gray', 'red', 'turquoise'],
+      colors: ['pink', 'lightblue', 'green', 'red', 'turquoise'],
       showCtx: false,
-      menuData: null,
+      menuData: newMenuData(),
       contextClicks: []
     }
   },
   methods: {
-    logClick(e, context) {
-      this.contextClicks.push(context)
-      console.log('logged!', context)
+    onCtxOpen(locals) {
+      console.log('open', locals)
+      this.menuData = locals
+    },
+
+    onCtxClose(locals) {
+      console.log('close', locals)
+      window.bbbb = locals
+    },
+
+    resetCtxLocals() {
+      this.menuData = newMenuData()
+    },
+
+    logClick(e,context) {
+      this.contextClicks.push(Object.assign({},this.menuData))
+      return logger('click')(context)
+    },
+    sayColor(color) {
+      window.alert(color)
     }
+  }
+}
+
+function logger(n) {
+  let name = 'event:ctx-' + n
+  return function(...more) {
+    console.log(name, ...more)
   }
 }
 </script>
