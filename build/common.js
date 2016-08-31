@@ -7,4 +7,4 @@ VueContextMenu.install = function install(Vue) {
 
 window.VueContextMenu = VueContextMenu
 
-module.exports = VueContextMenu
+module.exports = module.exports.default = VueContextMenu
