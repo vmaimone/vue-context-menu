@@ -29,10 +29,7 @@ module.exports = function createBodyClickListener(fn) {
 
   /* === private helpers ===================================== */
   function _onclick (e) {
-    // e.stopPropagation()
-    if (!e.target.tagName !== 'BODY') {
-      e.preventDefault()
-    }
+    e.preventDefault()
     if (typeof fn === 'function') fn(e)
     stop()
   }

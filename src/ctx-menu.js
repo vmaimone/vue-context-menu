@@ -20,12 +20,20 @@ export default {
         (e) => {
           let isOpen = !!this.ctxVisible
           let outsideClick = isOpen && !this.$el.contains(e.target)
-          this.ctxVisible = false
 
           if (outsideClick) {
-            this.$emit('ctx-cancel', this.locals)
-            e.stopPropagation()
+            if (e.which !== 1) {
+              e.preventDefault()
+              e.stopPropagation()
+              return false;
+            } else {
+
+              this.ctxVisible = false
+              this.$emit('ctx-cancel', this.locals)
+              e.stopPropagation()
+            }
           } else {
+            this.ctxVisible = false
             this.$emit('ctx-close', this.locals)
           }
         }
