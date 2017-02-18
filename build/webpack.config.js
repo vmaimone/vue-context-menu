@@ -1,4 +1,4 @@
-var webpack = require('webpack')
+var webpack = require( 'webpack' )
 
 module.exports = {
     entry: "./build/common.js",
@@ -7,17 +7,25 @@ module.exports = {
         path: __dirname
     },
     plugins: [
-      new webpack.optimize.OccurenceOrderPlugin()
+        new webpack.optimize.OccurrenceOrderPlugin()
     ],
     module: {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel'
+                loader: 'babel-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.vue$/,
-                loader: 'vue'
+                loader: 'vue-loader'
+                ,
+                options: {
+                    loaders: {
+                        js: 'babel-loader',//!eslint-loader
+                        css: 'css-loader',//sass-loader
+                    },
+                },
             }
         ]
     }

@@ -1,24 +1,24 @@
 <template lang="html">
   <div>
     <div
-      v-for="color in colors"
+      v-for="(color, index) in colors"
       class="colored-box"
       :style="{background: color}"
       @click="sayColor(color)"
-      @contextmenu.prevent="$refs.ctx.open($event, {color: color, index: $index})">
+      @contextmenu.prevent="$refs.ctx.open($event, {color: color, index: index})">
     </div>
 
     <div class="rhs">
-      Local Menu Data: <pre class="example">{{ menuData | json }}</pre>
+      Local Menu Data: <pre class="example">{{ menuData }}</pre>
     </div>
     <div style="clear:both;"></div>
 
     <hr style="margin: 2rem auto">
 
-    <pre class="example">{{ contextClicks | json }}</pre>
+    <pre class="example">{{ contextClicks }}</pre>
 
 
-    <context-menu id="testingctx" v-ref:ctx @ctx-open="onCtxOpen" @ctx-cancel="resetCtxLocals" @ctx-close="onCtxClose">
+    <context-menu id="testingctx" ref="ctx" @ctx-open="onCtxOpen" @ctx-cancel="resetCtxLocals" @ctx-close="onCtxClose">
         <li class="ctx-header">{{menuData.color}}</li>
         <li class="ctx-item">option one</li>
         <li class="ctx-item disabled">option two (disabled)</li>
@@ -52,7 +52,7 @@
   }
 </style>
 <script>
-import { default as contextMenu } from '../src/index.vue'
+import contextMenu from '../src/index.vue'
 
 const newMenuData = () => ({ color: null })
 

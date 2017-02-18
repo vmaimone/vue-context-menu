@@ -1,6 +1,6 @@
 <template lang="html">
 	<div
-		v-el:context-menu
+		ref="contextMenu"
 		@click.stop
 		@contextmenu.stop
     :id="id"
