@@ -2,9 +2,7 @@
 
 > vue context-menu component
 
-Demo: https://vmaimone.github.io/vue-context-menu/#/demo
-
-
+Demo: https://vmaimone.github.io/vue-context-menu
 
 # Example Usage
 ```
@@ -42,6 +40,10 @@ npm run build
 # runs Karma with test/*.js
 npm run test
 
-# runs vue-dev-server with the content of dev/
+# runs webpack-dev-server
 npm run dev
 ```
+## Vue 1.x Support
+Haven't migrated to Vue 2.x yet?
+
+`npm install vue-context-menu@0.0.13`
