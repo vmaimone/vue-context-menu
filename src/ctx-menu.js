@@ -13,6 +13,7 @@ export default {
   data() {
     return {
       locals: {},
+      align: 'left',
       ctxTop: 0,
       ctxLeft: 0,
       ctxVisible: false,

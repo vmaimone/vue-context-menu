@@ -4,9 +4,8 @@
 		@click.stop
 		@contextmenu.stop
     :id="id"
-    class="ctx-menu-container"
-		:ctx="ctxFocus"
-		:style="ctxStyle">
+    :style="ctxStyle"
+    class="ctx-menu-container">
 		<div style="background-color:transparent" class="ctx open">
       <ul
         role="menu"
