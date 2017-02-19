@@ -8,3 +8,4 @@ static/
 !/eslintrc.js
 npm-debug.log*
 vue-context-menu.js
+!docs/vue-context-menu.js
