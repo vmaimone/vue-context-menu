@@ -13,7 +13,7 @@ Demo: https://vmaimone.github.io/vue-context-menu/#!/demo
   ...
 </div>
 
-<context-menu id="context-menu" v-ref:ctx-menu>
+<context-menu id="context-menu" ref="ctxMenu">
   <li @click="doSomething(...)">option 1</li>
   <li class="disabled">option 2</li>
   <li>option 3</li>
