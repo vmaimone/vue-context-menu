@@ -7,3 +7,4 @@ static/
 /*.js
 !/eslintrc.js
 build/bundle.js
+npm-debug.log*

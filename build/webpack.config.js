@@ -6,6 +6,11 @@ module.exports = {
         filename: "bundle.js",
         path: __dirname
     },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.common.js'
+        }
+    },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
     ],

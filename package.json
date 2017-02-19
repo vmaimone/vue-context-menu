@@ -28,7 +28,7 @@
     "vue-dev-server": "^2.0.4",
     "vue-hot-reload-api": "^2.0.9",
     "vue-html-loader": "^1.2.2",
-    "vue-loader": "^11.0.0",
+    "vue-loader": "^11.1.0",
     "vue-style-loader": "^2.0.0",
     "webpack": "^1.14.0"
   },
@@ -39,7 +39,8 @@
   "readmeFilename": "README.md",
   "scripts": {
     "build:vue": "NODE_ENV=production webpack --config build/webpack.lib.config.js",
-    "build:webpack": "webpack --config build/webpack.config.js",
+    "build:webpack": "NODE_ENV=production webpack --config build/webpack.config.js",
+    "build:demo": "webpack --config build/webpack.demo.config.js",
     "build": "run-npm build:*",
     "analysis": "NODE_ENV=production webpack --profile --json --config build/webpack.lib.config.js > stats.json",
     "dev": "vue-dev-server",
