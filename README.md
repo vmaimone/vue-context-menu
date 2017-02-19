@@ -2,7 +2,7 @@
 
 > vue context-menu component
 
-Demo: https://vmaimone.github.io/vue-context-menu/#!/demo
+Demo: https://vmaimone.github.io/vue-context-menu/#/demo
 
 
 
