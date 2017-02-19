@@ -13,8 +13,7 @@
         :class="{
           'ctx-menu-right': align==='right',
           'ctx-menu-left': align==='left'
-        }"
-      >
+        }">
         <slot></slot>
       </ul>
 		</div>

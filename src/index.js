@@ -1,21 +1,10 @@
-let Vue = require("vue")
-Vue.config.debug = true
-let Router = require("/Users/vin/@vmaimone/vue-context-menu/node_modules/vue-router/dist/vue-router.common.js")
-Vue.use(Router)
-let routes = [
-  {path: "/index", component: require("./index.vue")},
+var VueContextMenu = require('./index.vue')
 
-]
-let router = new Router({routes:[
-  {path: "/index", component: require("./index.vue")},
+VueContextMenu.install = function install(Vue) {
+  var component = Vue.component('context-menu', VueContextMenu)
+  return component
+}
 
-  {path:"/",component: require("/Users/vin/@vmaimone/vue-context-menu/node_modules/vue-dev-server/app/main.js")}
-]})
-router.afterEach(function(to) {
-  document.title = to.path + " - vue-dev-server"
-})
-let app = new Vue({
-  data: function() {return {availableRoutes: routes}},
-  // template: "<router-view></router-view>",
-  router: router
-  }).$mount("#app")
+window.VueContextMenu = VueContextMenu
+
+module.exports = module.exports.default = VueContextMenu

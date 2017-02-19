@@ -31,7 +31,7 @@ module.exports = function createBodyClickListener(fn) {
   function _onclick (e) {
     e.preventDefault()
     if (typeof fn === 'function') fn(e)
-    stop()
+    try { stop() } catch(e) { /* no prob */ }
   }
 
   function _onescape (e) {

@@ -3,7 +3,7 @@
   "description": "vue context-menu component",
   "version": "2.0.0",
   "author": "Vin Maimone",
-  "main": "index.js",
+  "main": "vue-context-menu.js",
   "engines": {
     "node": "*"
   },
@@ -17,20 +17,10 @@
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "babel-runtime": "^6.23.0",
-    "css-loader": "^0.26.1",
-    "eslint": "^3.15.0",
-    "gh-pages": "^0.12.0",
-    "sass-loader": "^6.0.1",
-    "script-runner": "^0.1.4",
-    "template-html-loader": "^1.0.0",
     "vue": "^2.1.0",
-    "vue-compiler": "~2.0.0",
-    "vue-dev-server": "^2.0.4",
-    "vue-hot-reload-api": "^2.0.9",
-    "vue-html-loader": "^1.2.2",
     "vue-loader": "^11.1.0",
-    "vue-style-loader": "^2.0.0",
-    "webpack": "^1.14.0"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.4.0"
   },
   "keywords": [
     "component",
@@ -38,17 +28,13 @@
   ],
   "readmeFilename": "README.md",
   "scripts": {
-    "build:vue": "NODE_ENV=production webpack --config build/webpack.lib.config.js",
-    "build:webpack": "NODE_ENV=production webpack --config build/webpack.config.js",
-    "build:demo": "webpack --config build/webpack.demo.config.js",
-    "build": "run-npm build:*",
-    "analysis": "NODE_ENV=production webpack --profile --json --config build/webpack.lib.config.js > stats.json",
-    "dev": "vue-dev-server",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "analysis": "NODE_ENV=production webpack --profile --json --config webpack.config.js > stats.json",
+    "dev": "webpack-dev-server --config webpack.config.js",
     "watch": "karma start test/karma.conf.js --browsers Chrome --auto-watch --reporters spec",
     "test": "karma start test/karma.conf.js --browsers Chrome --single-run",
     "version": "npm run build && git add .",
-    "postversion": "git push && git push --tags && npm publish",
-    "ghpages": "gh-pages -d static"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "directories": {
     "test": "test"
@@ -62,7 +48,5 @@
     "url": "https://github.com/vmaimone/vue-context-menu/issues"
   },
   "homepage": "https://github.com/vmaimone/vue-context-menu#readme",
-  "dependencies": {
-    "vue": "^2.1.10"
-  }
+  "dependencies": {}
 }
