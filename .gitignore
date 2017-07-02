@@ -4,8 +4,8 @@ node_modules
 npm-debug.log
 dev/index.js
 static/
-/*.js
 !/eslintrc.js
 npm-debug.log*
 vue-context-menu.js
 !docs/vue-context-menu.js
+stats.json
