@@ -44,9 +44,9 @@ export default {
   methods: {
 
     setPositionFromEvent(e) {
-      const { pageX, pageY } = e
-      this.ctxTop = pageY - (document.body.scrollTop)
-      this.ctxLeft = pageX
+      const { pageX, pageY, clientX, clientY } = e
+      this.ctxTop = clientY || pageY
+      this.ctxLeft = clientX || pageX
     },
 
     open(e, data) {
