@@ -43,10 +43,24 @@ export default {
   },
   methods: {
 
+    /*
+     * this function handles some cross-browser compat issues
+     * thanks to https://github.com/callmenick/Custom-Context-Menu
+     */
     setPositionFromEvent(e) {
-      const { pageX, pageY, clientX, clientY } = e
-      this.ctxTop = clientY || pageY
-      this.ctxLeft = clientX || pageX
+      e = e || window.event
+
+      const scrollingElement = document.scrollingElement || document.documentElement
+
+      if (e.pageX || e.pageY) {
+        this.ctxLeft = e.pageX
+        this.ctxTop = e.pageY - scrollingElement.scrollTop
+      } else if (e.clientX || e.clientY) {
+        this.ctxLeft = e.clientX + scrollingElement.scrollLeft
+        this.ctxTop = e.clientY + scrollingElement.scrollTop
+      }
+
+      return e
     },
 
     open(e, data) {
