@@ -59,15 +59,19 @@ export default {
         this.ctxTop = e.clientY + scrollingElement.scrollTop
       }
 
+
       this.$nextTick(() => {
         const menu = this.$el
         const minHeight = (menu.style.minHeight || menu.style.height).replace('px', '') || 32
+        const minWidth = (menu.style.minWidth || menu.style.width).replace('px', '') || 32
         const scrollHeight = menu.scrollHeight || minHeight
-        const threshold = this.ctxTop + (1.5 * scrollHeight)
-        const docHeight = Math.max(scrollingElement.clientHeight, document.documentElement.clientHeight)
-        if(docHeight <= threshold) {
-          this.ctxTop -= (3 * scrollHeight / 4)
-        }
+        const scrollWidth = menu.scrollWidth || minWidth
+
+        const largestHeight = window.innerHeight - scrollHeight - 25;
+        const largestWidth = window.innerWidth - scrollWidth - 25;
+
+        if (this.ctxTop > largestHeight) this.ctxTop = largestHeight;
+        if (this.ctxLeft > largestWidth) this.ctxLeft = largestWidth;
       })
       return e
     },
