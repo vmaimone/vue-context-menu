@@ -28,7 +28,6 @@ export default {
               e.stopPropagation()
               return false;
             } else {
-
               this.ctxVisible = false
               this.$emit('ctx-cancel', this.locals)
               e.stopPropagation()
@@ -60,6 +59,16 @@ export default {
         this.ctxTop = e.clientY + scrollingElement.scrollTop
       }
 
+      this.$nextTick(() => {
+        const menu = this.$el
+        const minHeight = (menu.style.minHeight || menu.style.height).replace('px', '') || 32
+        const scrollHeight = menu.scrollHeight || minHeight
+        const threshold = this.ctxTop + (1.5 * scrollHeight)
+        const docHeight = Math.max(scrollingElement.clientHeight, document.documentElement.clientHeight)
+        if(docHeight <= threshold) {
+          this.ctxTop -= (3 * scrollHeight / 4)
+        }
+      })
       return e
     },
 
