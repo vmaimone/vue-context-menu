@@ -1,6 +1,7 @@
 node_modules
 *.sublime-project
 *.sublime-workspace
+.idea
 npm-debug.log
 dev/index.js
 static/
