@@ -72,6 +72,7 @@
 .ctx-item.disabled:focus,
 .ctx-item.disabled:hover {
   text-decoration: none;
+  pointer-events: none;
   cursor: not-allowed;
   background-color: transparent;
   background-image: none;
