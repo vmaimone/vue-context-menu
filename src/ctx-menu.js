@@ -104,5 +104,8 @@ export default {
         'left': (this.ctxLeft || 0) + 'px'
       }
     }
+  },
+  beforeDestroy() {
+    this.bodyClickListener.stop();
   }
 }
