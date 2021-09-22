@@ -84,6 +84,13 @@ export default {
       this.$el.setAttribute('tab-index', -1)
       this.bodyClickListener.start()
       return this
+    },
+
+    close() {
+      this.ctxVisible = false
+      this.$emit('ctx-close', this.locals)
+      this.bodyClickListener.stop()
+      return this
     }
   },
   watch: {
